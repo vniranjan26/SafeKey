@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">SafeKey</string>
+    <string name="welcome">Welcome!</string>
+    <string name="get_started">Get started with</string>
+    <string name="sign_up_with">Or sign up with</string>
+    <string name="email">Email</string>
+    <string name="already">Already onboard?</string>
+    <string name="login">Login</string>
+    <string name="hello">Hello.</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_pwd">Password</string>
+    <string name="hint_confirm_pwd">Confirm password</string>
+    <string name="sign_up">Sign up</string>
+    <string name="register_error">All fields must be filled out</string>
+    <string name="wel_back">Welcome Back</string>
+    <string name="ny_register">Not yet registered?</string>
+    <string name="signup">Signup</string>
+    <string name="otp_title">Please enter the 6 digit verification code</string>
+    <string name="sent">Sent to :</string>
+    <string name="resend_msg">Didn’t receive the OTP ?</string>
+    <string name="resend_again_msg">Resend again</string>
+    <string name="verify">Verify</string>
+    <string name="forgot_pass">Forgot Password ?</string>
+    <string name="reset">Reset</string>
+    <string name="recovery">Account Recovery</string>
+    <string name="re_email">Re-enter Email</string>
+    <string name="login1">Login ?</string>
+    <string name="submit">Submit</string>
+    <string name="save">Save</string>
+    <string name="lock_title">Enter Authentication Pin</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+</resources>

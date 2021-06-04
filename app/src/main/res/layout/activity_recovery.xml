@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Recovery"
+    android:background="@android:color/white">
+
+    <View
+        android:id="@+id/ellipse"
+        android:layout_width="397dp"
+        android:layout_height="397dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="-230dp"
+        android:layout_marginLeft="-175dp"
+        android:background="@drawable/icon_background"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recovery"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/dark_blue"
+        android:textSize="26dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginLeft="215dp"
+        android:layout_marginRight="32dp"/>
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="33dp"
+        app:srcCompat="@drawable/logo_white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="200dp"
+        android:background="@android:color/white">
+
+        <EditText
+            android:id="@+id/editText_email"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_email"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginRight="32dp"
+            android:layout_marginLeft="33dp"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/grey"
+            android:textCursorDrawable="@null" />
+
+        <EditText
+            android:id="@+id/editText_emailCon"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/re_email"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginRight="32dp"
+            android:layout_marginLeft="33dp"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/grey"
+            android:textCursorDrawable="@null"/>
+
+        <TextView
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="33dp"
+            android:layout_marginRight="32dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/login1"
+            android:textColor="@android:color/black"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="310dp"
+            android:layout_height="50dp"
+            android:onClick="onSubmit"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@drawable/email_button_layout"
+            android:text="@string/submit"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="16dp"
+            android:layout_marginTop="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="33dp"
+            android:layout_marginTop="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ny_register"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@android:color/black"
+                android:textSize="16dp"/>
+
+
+            <TextView
+                android:id="@+id/signup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/signup"
+                android:textColor="@color/dark_blue"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

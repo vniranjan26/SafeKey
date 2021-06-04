@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#000</color>
+    <color name="colorPrimaryDark">#000</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="dark_blue">#3B5998</color>
+    <color name="fb_bg">#3B5998</color>
+    <color name="twitter_bg">#00ACED</color>
+    <color name="grey">#40000000</color>
+    <color name="orange">#E95345</color>
+    <color name="line_colors">#FFC107</color>
+    <color name="lighgrey">#989797</color>
+    <color name="underline">#D8D6D6</color>
+    <color name="tint_white">#B2F4FBFB</color>
+
+    <color name="toolbar_color">#ffffff</color>
+    <color name="ActionToggle">#737373</color>
+    <color name="nav_drawer_color">#ffffff</color>
+    <color name="nav_drawer_user_color">#000000</color>
+    <color name="home_color">#B2F4FBFB</color>
+    <color name="card_bg">#ffffff</color>
+    <color name="activity_bg">#ffffff</color>
+    <color name="b_w_text">#000000</color>
+    <color name="grey_tint">#40000000</color>
+    <color name="dark_grey">#80000000</color>
+
+</resources>
