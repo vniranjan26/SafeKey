@@ -66,14 +66,14 @@ public class OtpActivity extends AppCompatActivity {
         db = new DatabaseHandler(getApplicationContext());
         session = new SessionManager(getApplicationContext());
         // Hide Keyboard
-       //getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+       getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         btn_resend.setEnabled(false);
         btn_resend.setVisibility(View.GONE);
 
         btn_verify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // Functions.hideSoftKeyboard(OtpActivity.this);
+                getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
 
                 String otp = Objects.requireNonNull(pinView.getText()).toString();
@@ -153,7 +153,7 @@ public class OtpActivity extends AppCompatActivity {
                     logout.logoutUser(getApplicationContext());
                     db.addUser(json_user.getString(KEY_UID), json_user.getString(KEY_NAME), json_user.getString(KEY_EMAIL), json_user.getString(KEY_CREATED_AT));
                     session.setLogin(true);
-                    Intent upanel = new Intent(OtpActivity.this, MainActivity.class);
+                    Intent upanel = new Intent(OtpActivity.this, HomeActivity.class);
                     upanel.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(upanel);
                     finish();
@@ -218,7 +218,10 @@ public class OtpActivity extends AppCompatActivity {
 
                 // Check for error node in json
                 if (!error) {
-                    Toast.makeText(getApplicationContext(), "Code successfully sent to your email!", Toast.LENGTH_LONG).show();
+                    new SweetAlertDialog(OtpActivity.this, SweetAlertDialog.SUCCESS_TYPE)
+                    .setTitleText("OTP Resend")
+                            .setContentText("Please check your spam/promotiomal folder of mailbox")
+                            .show();
                       btn_resend.setEnabled(false);
                       btn_resend.setVisibility(View.GONE);
                       countDown();

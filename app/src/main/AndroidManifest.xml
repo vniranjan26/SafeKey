@@ -20,7 +20,8 @@
         <activity android:name=".Add" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".Recovery" />
-        <activity android:name=".OtpActivity" />
+        <activity android:name=".OtpActivity"
+            android:windowSoftInputMode="stateVisible"/>
         <activity android:name=".SignupActivity" />
         <activity android:name=".onBoarding">
             <intent-filter>
