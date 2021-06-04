@@ -13,6 +13,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.content.ActivityNotFoundException;
+import android.content.ComponentName;
 import android.content.Intent;
 import android.database.Cursor;
 import androidx.biometric.BiometricPrompt;
@@ -163,6 +165,18 @@ public class HomeActivity extends AppCompatActivity {
                         startActivity(share);
                         break;
                     case R.id.nav_rate:
+                        String uriString = "https://developervaibhav.in/safekey.html";
+                        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uriString));
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        intent.setPackage("com.android.chrome");
+                        try {
+                            Log.d("TAG", "onClick: inTryBrowser");
+                            startActivity(intent);
+                        } catch (ActivityNotFoundException ex) {
+                            Log.e("TAG", "onClick: in inCatchBrowser", ex );
+                            intent.setPackage(null);
+                            startActivity(Intent.createChooser(intent, "Select Browser"));
+                        }
                         break;
                     default:
                         return true;
