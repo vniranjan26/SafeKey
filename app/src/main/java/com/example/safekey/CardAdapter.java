@@ -95,8 +95,8 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
                 b.putString("userPassword", cardlist.get(position).getUserPassword());
                 Intent i = new Intent(context, Edit_Card.class);
                 i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                i.putExtras(b);
                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                i.putExtras(b);
                 context.startActivity(i);
             }
         });

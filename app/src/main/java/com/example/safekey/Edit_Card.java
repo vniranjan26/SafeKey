@@ -32,33 +32,17 @@ public class Edit_Card extends AppCompatActivity {
         card_password = (TextView)findViewById(R.id.card_password);
         text_view = (TextView)findViewById(R.id.text_view);
         username_tvview = (TextView)findViewById(R.id.username_tvview);
+        pass_tvview = (EditText)findViewById(R.id.pass_tvview);
         bundle = getIntent().getExtras();
         card_title.setText(bundle.getString("cardName"));
         text_view.setText(bundle.getString("cardName"));
         card_username.setText(bundle.getString("userName"));
         username_tvview.setText(bundle.getString("userName"));
         pass_tvview.setText(bundle.getString("userPassword"));
-
+        card_password.setText(bundle.getString("userPassword"));
         db = new DatabaseHandler(Edit_Card.this);
         user = db.getUserDetails();
         dataStore = new DataStore(this);
-
-        pass_tvview.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                card_password.setText(pass_tvview.getText().toString().trim());
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
     }
 
     public void onClickSave(View view) {

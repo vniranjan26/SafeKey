@@ -83,7 +83,7 @@ public class DataStore extends SQLiteOpenHelper {
             return false;
         }
     }
-    public boolean delete(String login_card_name)
+    public boolean delete( String login_card_name)
     {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery("SELECT  * FROM " + TABLE_LOGINCARD + " WHERE card_name=?",new String[] {login_card_name});
